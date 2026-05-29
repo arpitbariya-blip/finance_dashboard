@@ -1,0 +1,157 @@
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>register | Candy Finance</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#ffdad4",
+                        "surface-bright": "#fff8f6",
+                        "on-surface-variant": "#885046",
+                        "error-dim": "#821a01",
+                        "primary": "#9d4144",
+                        "surface-dim": "#ffcfc6",
+                        "on-secondary-fixed": "#194550",
+                        "secondary": "#3c6571",
+                        "surface-container-low": "#fff0ee",
+                        "secondary-container": "#bfe9f8",
+                        "on-primary": "#fff7f6",
+                        "surface-tint": "#9d4144",
+                        "on-secondary-container": "#2e5763",
+                        "on-primary-container": "#701f24",
+                        "on-tertiary": "#eefbff",
+                        "on-tertiary-fixed-variant": "#005b69",
+                        "primary-fixed": "#ffabaa",
+                        "on-error-container": "#671200",
+                        "surface-container": "#ffe9e5",
+                        "secondary-dim": "#2f5965",
+                        "on-primary-fixed-variant": "#7c282c",
+                        "inverse-surface": "#1e0705",
+                        "on-surface": "#53251d",
+                        "error": "#aa371c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#f0fbff",
+                        "on-tertiary-fixed": "#003c46",
+                        "tertiary-dim": "#005c69",
+                        "surface-container-high": "#ffe2dc",
+                        "secondary-fixed": "#bfe9f8",
+                        "on-error": "#fff7f6",
+                        "secondary-fixed-dim": "#b1dbe9",
+                        "primary-fixed-dim": "#ff9696",
+                        "inverse-on-surface": "#be938b",
+                        "primary-dim": "#8e3639",
+                        "inverse-primary": "#fe8d8e",
+                        "outline-variant": "#e7a094",
+                        "background": "#fff8f6",
+                        "tertiary-container": "#63e5ff",
+                        "outline": "#a86b5f",
+                        "on-background": "#53251d",
+                        "tertiary": "#006978",
+                        "error-container": "#fa7150",
+                        "surface": "#fff8f6",
+                        "surface-container-highest": "#ffdad4",
+                        "primary-container": "#ffabaa",
+                        "on-tertiary-container": "#00515d",
+                        "tertiary-fixed-dim": "#52d7f0",
+                        "on-secondary-fixed-variant": "#38616d",
+                        "tertiary-fixed": "#63e5ff",
+                        "on-primary-fixed": "#530912"
+                    },
+                    fontFamily: {
+                        "headline": ["DM Sans"],
+                        "body": ["DM Sans"],
+                        "label": ["DM Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+
+</head>
+
+<body class="bg-background min-h-screen flex flex-col items-center justify-center overflow-hidden relative">
+    <div class=" fixed inset-0 z-50 flex items-center justify-center" id="add-user-modal">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-pink-900/20 backdrop-blur-md transition-opacity"></div>
+        <!-- Modal Content -->
+        <div
+            class="relative bg-white dark:bg-slate-900 w-full max-w-lg mx-4 rounded-3xl shadow-2xl border-2 border-pink-50 dark:border-pink-900/30 overflow-hidden spring-bouncy-effect">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-black text-on-background">Add New User</h2>
+                    <button
+                        class="p-2 hover:bg-pink-50 rounded-full text-slate-400 hover:text-pink-600 transition-colors"
+                        onclick="location.href='login.php';">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <form id="addUserForm" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Full
+                            Name</label>
+                        <input
+                            class="w-full px-4 py-3 rounded-xl border-2 border-pink-50 focus:border-pink-500 focus:ring-0 transition-all bg-pink-50/30 text-on-background"
+                            name="full_name" placeholder="e.g. Arpit BK" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Email
+                            Address</label>
+                        <input
+                            class="w-full px-4 py-3 rounded-xl border-2 border-pink-50 focus:border-pink-500 focus:ring-0 transition-all bg-pink-50/30 text-on-background"
+                            name="email" placeholder="jane@candyfinance.com" type="email" />
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label
+                                class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Role</label>
+                            <select name="role"
+                                class="w-full px-4 py-3 rounded-xl border-2 border-pink-50 focus:border-pink-500 focus:ring-0 transition-all bg-pink-50/30 text-on-background">
+                                <option>Admin</option>
+                                <option>Analyst</option>
+                                <option>Viewer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Status</label>
+                            <select name="status"
+                                class="w-full px-4 py-3 rounded-xl border-2 border-pink-50 focus:border-pink-500 focus:ring-0 transition-all bg-pink-50/30 text-on-background">
+                                <option>Active</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <button
+                            class="flex-1 px-6 py-3 rounded-full font-bold text-slate-600 border-2 border-slate-100 hover:bg-slate-50 transition-all"
+                            onclick="location.href='login.php';" type="button">Cancel</button>
+                        <button
+                            class="flex-1 px-6 py-3 rounded-full font-bold text-white bg-pink-600 shadow-lg shadow-pink-200 hover:scale-105 active:scale-95 transition-all"
+                            type="submit" id="id1">Create User</button>
+                    </div>
+                </form>
+
+                <script>
+
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

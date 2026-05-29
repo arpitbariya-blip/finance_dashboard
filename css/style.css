@@ -1,0 +1,39 @@
+ .material-symbols-outlined {
+     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+ }
+
+ .spring-bouncy-effect {
+     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .material-symbols-outlined {
+     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+ }
+
+ .spring-bouncy-effect {
+     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .filter-dropdown-content {
+     display: none;
+ }
+
+ .filter-dropdown-content.active {
+     display: block;
+ }
+
+ body {
+     font-family: 'DM Sans', sans-serif;
+ }
+
+ .bouncy-spring {
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .bouncy-spring:hover {
+     transform: scale(1.03);
+ }
+
+ .material-symbols-outlined {
+     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+ }
